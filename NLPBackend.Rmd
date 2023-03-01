@@ -1,7 +1,4 @@
 ---
-title: "ShinyNLP"
-author: "Marvin Jakobs"
-date: "2023-03-01"
 output: html_document
 ---
 
@@ -9,13 +6,15 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-```{r}
+```{r include=FALSE}
 # get needed packages
 library(shiny)
 library(tesseract)
 library(magick)
 library(stringr)
 
+```
+```{r echo=FALSE}
 # making the ui for shiny app
 ui <- fluidPage(
   titlePanel("Image to Text Converter, Black Text on White Background"),

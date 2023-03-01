@@ -5,7 +5,7 @@ account: marvinjakobs
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 8444496
-bundleId: 6901910
+bundleId: 6902563
 url: https://marvinjakobs.shinyapps.io/shinynlp/
-when: 1677671569.9087
-lastSyncTime: 1677671569.90871
+when: 1677682622.90583
+lastSyncTime: 1677682622.90584
