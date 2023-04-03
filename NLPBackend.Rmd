@@ -7,7 +7,7 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 ```{r include=FALSE}
-# get needed packages
+# get packages
 library(shiny)
 library(tesseract)
 library(magick)
@@ -31,7 +31,7 @@ ui <- fluidPage(
 # set server for the shiny app
 server <- function(input, output) {
   
-  # when image uploaded, read it in and convert it to text, dont preform if no file uploaded
+  # when pic uploaded, read it in and convert it to text, dont preform if no file uploaded
   text_output <- reactive({
     if (is.null(input$image_upload)) { return(NULL) }
     
@@ -45,7 +45,7 @@ server <- function(input, output) {
     # using tesseract convert the image to text
     text <- ocr(image)
     
-    # clean up the text if messy
+    # replace new lines with spaces
     text <- str_trim(text)
     text <- str_replace_all(text, "[\r\n\t]", " ")
     text <- str_replace_all(text, " +", " ")
